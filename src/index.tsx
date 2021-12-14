@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App, {SourceDataType} from './lib/index';
 import reportWebVitals from './reportWebVitals';
+
+const source: SourceDataType = [{
+  thumbnailSrc: "https://image.tmdb.org/t/p/w500/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+  description: "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.",
+  title: "Venom: Let There Be Carnage",
+  fontColor:'#ffffff'
+}];
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App source={source} />
   </React.StrictMode>,
   document.getElementById('root')
 );
